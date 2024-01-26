@@ -1,0 +1,19 @@
+<section>
+  <article>
+    <h2>{{ post?.title }}</h2>
+    <p>{{ post?.body }}</p>
+  </article>
+</section>
+<section>
+  <form [formGroup]="applyForm" (submit)="submitComment()">
+    <label for="title">Title</label>
+    <input type="text" id="title" formControlName="title" />
+    <br />
+    <br />
+    <label for="comment">Commant</label>
+    <textarea id="comment" formControlName="comment"></textarea>
+
+    <br />
+    <button type="submit" class="primary">Soumettre</button>
+  </form>
+</section>
